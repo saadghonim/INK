@@ -3310,11 +3310,27 @@ html[dir=ltr] .product .swiper-button-prev {
   align-items: center;
   justify-content: space-between;
 }
+@media only screen and (max-width: 767px) {
+  .cart_div_qty {
+    flex-direction: column;
+  }
+}
 .cart_div_qty > span {
   font-size: 16px;
   color: #000000;
 }
 
+@media only screen and (max-width: 767px) {
+  .product_section .size_div {
+    margin-bottom: 20px;
+  }
+  .product_section .quantity {
+    margin-bottom: 20px;
+  }
+  .cart_div_qty > span {
+    margin-bottom: 10px;
+  }
+}
 #myform {
   direction: ltr;
   width: 155px;

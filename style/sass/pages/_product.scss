@@ -354,9 +354,34 @@
 .cart_div_qty {
   @include flex-var(flex, center, space-between);
 
+  @include xs {
+    flex-direction: column;
+
+  }
+
+
+
   >span {
     font-size: 16px;
     color: #000000;
+  }
+}
+
+@include xs {
+  .product_section {
+    .size_div {
+      margin-bottom: 20px;
+    }
+
+    .quantity {
+      margin-bottom: 20px;
+    }
+  }
+
+  .cart_div_qty {
+    >span {
+      margin-bottom: 10px;
+    }
   }
 }
 

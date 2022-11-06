@@ -1014,10 +1014,16 @@ nav {
   color: #f82d2d;
 }
 .user-shoping .anc_cart {
-  -webkit-margin-end: 0;
-          margin-inline-end: 0;
-  -webkit-margin-start: 15px;
-          margin-inline-start: 15px;
+  -webkit-margin-end: 15px;
+          margin-inline-end: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .user-shoping .anc_cart {
+    -webkit-margin-start: 15px;
+            margin-inline-start: 15px;
+    -webkit-margin-end: 0;
+            margin-inline-end: 0;
+  }
 }
 .user-shoping .btn-cart {
   position: relative;

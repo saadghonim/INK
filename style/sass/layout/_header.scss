@@ -103,8 +103,16 @@ nav {
   }
 
   .anc_cart {
-    margin-inline-end: 0;
-    margin-inline-start: 15px;
+
+    @include xs {
+      margin-inline-start: 15px;
+      margin-inline-end: 0;
+    }
+
+    margin-inline-end: 15px;
+    // margin-inline-end: 0;
+
+
   }
 
   .btn-cart {

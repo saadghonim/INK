@@ -31,7 +31,7 @@ $(document).ready(function () {
   });
   // open menu mobile
   if ($(document).width() < 768) {
-    $(".action_menu >a").click(function (e) {
+    $(".action_menu > a").click(function (e) {
       e.preventDefault();
       $(this).next().slideToggle("500");
     });

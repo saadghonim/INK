@@ -83,6 +83,11 @@
   &:hover {
     color: #9a9a9a;
   }
+
+  @include en {
+    height: 38px;
+    overflow: hidden;
+  }
 }
 
 
@@ -99,6 +104,10 @@
   color: #808080;
   font-weight: 300;
   margin-bottom: 10px;
+
+  @include xs {
+    height: 36px;
+  }
 }
 
 .product_color_parant {

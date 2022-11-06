@@ -625,6 +625,10 @@ html[dir=ltr] .shape_n {
 .product_title:hover {
   color: #9a9a9a;
 }
+html[dir=ltr] .product_title {
+  height: 38px;
+  overflow: hidden;
+}
 
 .product_price {
   font-size: 16px;
@@ -638,6 +642,11 @@ html[dir=ltr] .shape_n {
   color: #808080;
   font-weight: 300;
   margin-bottom: 10px;
+}
+@media only screen and (max-width: 767px) {
+  .product_size_parant {
+    height: 36px;
+  }
 }
 
 .product_color_parant {
@@ -1003,6 +1012,12 @@ nav {
 .user-shoping button:hover,
 .user-shoping .anc_cart:hover {
   color: #f82d2d;
+}
+.user-shoping .anc_cart {
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+  -webkit-margin-start: 15px;
+          margin-inline-start: 15px;
 }
 .user-shoping .btn-cart {
   position: relative;

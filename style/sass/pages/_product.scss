@@ -147,13 +147,16 @@
 
     }
 
-    span {
-      font-size: 14px;
-      color: #999999;
+    a {
+      @include flex-var(flex, center, start);
 
-      a {
-        color: $black_color;
+      span {
+        font-size: 14px;
+        color: #999999;
+        margin-inline-end: 3px;
       }
+
+      color: $black_color;
     }
 
   }
@@ -406,6 +409,10 @@
     font-size: 18px;
     color: #000000;
     font-weight: 500;
+
+    &:focus {
+      border-color: #000000;
+    }
   }
 }
 

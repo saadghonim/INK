@@ -1,7 +1,7 @@
 body {
   font-weight: 400;
   font-style: normal;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 
 figure {
@@ -312,32 +312,26 @@ img {
 
 @media only screen and (max-width: 767px) {
   .breadcrumb-parant {
-    display: none;
     padding: 20px 0;
     margin-bottom: 50px;
   }
   .breadcrumb_ {
-    color: #ffffff;
     font-size: 13px;
   }
 }
-.pagination- {
-  margin-bottom: 10px;
+.Category_section.sigle_page {
+  margin-bottom: 70px;
+  min-height: auto;
 }
+
 .pagination- .ul_pagination {
-  padding-bottom: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .pagination- .ul_pagination li:nth-child(2) button {
-  color: #2a394e;
-  background-color: #ffffff;
-}
-@media only screen and (max-width: 767px) {
-  .pagination- .ul_pagination {
-    padding-bottom: 40px;
-  }
+  color: #ffffff;
+  background-color: #000000;
 }
 .pagination- .ul_pagination .btn_angle {
   font-size: 18px;
@@ -346,11 +340,11 @@ img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #44546b;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
 }
 .pagination- .ul_pagination .btn_angle:hover {
-  color: #2a394e;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #000000;
 }
 .pagination- .ul_pagination .btn_pagination {
   width: 40px;
@@ -360,11 +354,11 @@ img {
   background-color: transparent;
   font-size: 16px;
   color: #a4a4a4;
-  background-color: #44546b;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
 }
 .pagination- .ul_pagination .btn_pagination:hover {
-  color: #2a394e;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 @font-face {
@@ -376,7 +370,7 @@ img {
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat-Arabic-Light.woff2") format("woff2"), url("../fonts/Montserrat-Arabic-Light.woff") format("woff"), url("../fonts/Montserrat-Arabic-Light.ttf") format("truetype");
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -713,10 +707,6 @@ html[dir=ltr] .product_title {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.product_img_div .btn_stitching:hover {
-  background-color: #f82d2d;
-  color: #ffffff;
 }
 .product_img_div .printer {
   background-color: #58c0f0;
@@ -1380,7 +1370,9 @@ nav {
   }
   .anc_nav.anc_lang {
     display: block;
-    padding-top: 15px;
+    position: absolute;
+    top: 20px;
+    inset-block-start: 20px;
   }
   .btn_bars {
     display: block;
@@ -1414,6 +1406,11 @@ nav {
   nav .ul_nav {
     flex-direction: column;
     justify-content: start;
+    padding: 0 15px;
+  }
+  nav .ul_nav .action_menu .anc_nav {
+    display: flex;
+    justify-content: space-between;
   }
   nav .ul_nav .action_menu .anc_nav::after {
     font-size: 8px;
@@ -1422,7 +1419,6 @@ nav {
     position: static;
     padding: 15px;
     max-width: 120px;
-    margin: auto;
     transform: inherit;
     box-shadow: none;
     visibility: visible;
@@ -1440,7 +1436,7 @@ nav {
   nav .ul_nav li {
     margin: 0;
     margin-bottom: 15px;
-    text-align: center;
+    text-align: start;
     width: 100%;
     padding: 0;
   }
@@ -1613,10 +1609,10 @@ footer {
 }
 
 .select2-container--open .select2-dropdown--below {
-  border-top-left-radius: 1px;
-  border-top-right-radius: 1px;
-  border: 1px solid #000000;
-  border-top: none;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: #f2f2f2;
+  border: none;
 }
 
 .group_content {
@@ -1722,8 +1718,8 @@ footer {
   height: 40px;
   border-radius: 20px;
   background-color: #f2f2f2;
+  border: 1px solid transparent;
   caret-color: #000000;
-  border: none;
   padding: 0 20px;
   font-size: 12px;
   color: #999999;
@@ -1744,6 +1740,7 @@ footer {
 }
 .form_group input:focus {
   outline: 0;
+  border-color: #000000;
 }
 .form_group .div_btn {
   position: relative;
@@ -1890,6 +1887,11 @@ footer {
 .select2-container[dir=rtl] .select2-selection--single .select2-selection__rendered {
   font-size: 12px;
   font-weight: 400;
+  border: 1px solid transparent;
+  border-radius: 40px;
+}
+.select2-container[dir=rtl] .select2-selection--single .select2-selection__rendered:focus {
+  border-color: #000000;
 }
 
 .select2-results__option--selectable {
@@ -1900,7 +1902,14 @@ footer {
 }
 
 .select2-container--default .select2-results__option--selected {
-  background-color: #ffffff;
+  background-color: transparent;
+}
+
+.select2-gender .select2-search.select2-search--dropdown {
+  display: none !important;
+}
+.select2-gender .select2-container--default .select2-search--dropdown .select2-search__field {
+  display: none !important;
 }
 
 .cart_page_section {
@@ -1965,7 +1974,8 @@ footer {
   text-align: start;
   display: none;
 }
-.item_cart_ span {
+.item_cart_ span,
+.item_cart_ .anc_cart_product_n {
   font-size: 16px;
   color: #000000;
   font-weight: 300;
@@ -2180,6 +2190,10 @@ footer {
   font-size: 36px;
   margin-bottom: 10px;
 }
+.add_address_parant .active-color {
+  border-color: #000000;
+  color: #000000;
+}
 
 .payment-methods-content {
   display: flex;
@@ -2195,6 +2209,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 @media only screen and (max-width: 767px) {
   .payment-methods-content .payment-methods {
@@ -2206,6 +2221,7 @@ footer {
 .payment-methods-content .payment-img {
   border: 2px solid #f2f2f2;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .payment-methods-content .payment-img img {
   max-width: 100%;
@@ -2228,6 +2244,7 @@ footer {
 }
 .payment-methods-content .payment-method span {
   font-size: 14px;
+  cursor: pointer;
   color: #a6a6a6;
 }
 html[dir=ltr] .payment-methods-content .payment-method span {
@@ -2568,6 +2585,46 @@ html[dir=ltr] .sidebar_ .ul_sidebar li .anc_sidebar {
   background-color: #dedede;
 }
 
+.btn_address {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn_address span {
+  background-color: #333;
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  min-width: 120px;
+  padding: 5px 10px;
+  top: -38px;
+  transition: 0.5s;
+  opacity: 0;
+  visibility: visible;
+  text-transform: capitalize;
+}
+
+.btn_address span::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 10px solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.btn_address:hover {
+  overflow: visible;
+}
+
+.btn_address:hover span {
+  display: inline;
+  opacity: 1;
+}
+
 .myOrders_section {
   margin-bottom: 70px;
 }
@@ -2831,6 +2888,9 @@ html[dir=ltr] .sidebar_ .ul_sidebar li .anc_sidebar {
           padding-inline-end: 60px;
   padding-bottom: 30px;
 }
+.collapse_parant .toggle_collapse.open-collapse {
+  display: block;
+}
 
 .icon-wrapper {
   width: 30px;
@@ -2891,11 +2951,11 @@ html[dir=ltr] .sidebar_ .ul_sidebar li .anc_sidebar {
 }
 
 .poen_co {
-  color: #2a394e !important;
+  color: #000000 !important;
 }
 
 .poen_backg {
-  background-color: #2a394e !important;
+  background-color: #000000 !important;
 }
 
 @media only screen and (max-width: 767px) {
@@ -3024,9 +3084,11 @@ html[dir=ltr] .sidebar_ .ul_sidebar li .anc_sidebar {
   font-weight: 400;
   line-height: 1.8;
   color: #999999;
+  border: 1px solid transparent;
 }
 .contact_section textarea:focus {
   outline: 0;
+  border-color: #000000;
 }
 
 .wishlist_section.sigle_page {
@@ -3155,12 +3217,17 @@ html[dir=ltr] .sidebar_ .ul_sidebar li .anc_sidebar {
 .product_section .n_designer figure img {
   max-width: 100%;
 }
-.product_section .n_designer span {
+.product_section .n_designer a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: #000000;
+}
+.product_section .n_designer a span {
   font-size: 14px;
   color: #999999;
-}
-.product_section .n_designer span a {
-  color: #000000;
+  -webkit-margin-end: 3px;
+          margin-inline-end: 3px;
 }
 .product_section .colors_div .form__radio-input {
   display: none;
@@ -3375,6 +3442,9 @@ html[dir=ltr] .product .swiper-button-prev {
   color: #000000;
   font-weight: 500;
 }
+#myform input:focus {
+  border-color: #000000;
+}
 
 .qty {
   width: 40px;
@@ -3451,4 +3521,27 @@ html[dir=ltr] .btn_addToCart {
 .designer_page_section {
   padding-top: 70px;
   margin-bottom: 70px;
+}
+
+.Category_section .title_main {
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .Category_section.sigle_page {
+    padding-top: 0px;
+  }
+}
+.Category_section .new {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .Category_section .new {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
 }/*# sourceMappingURL=main.css.map */

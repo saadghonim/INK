@@ -64,7 +64,8 @@
   display: none;
  }
 
- span {
+ span,
+ .anc_cart_product_n {
   font-size: 16px;
   color: #000000;
   font-weight: 300;
@@ -307,7 +308,14 @@
    margin-bottom: 10px;
   }
  }
+
+ .active-color {
+  border-color: #000000;
+  color: #000000;
+ }
 }
+
+
 
 .payment-methods-content {
  @include xs {
@@ -322,11 +330,14 @@
   @include xs {
    @include grid_var(grid, repeat(2, 1fr, ), 30px 15px);
   }
+
+  cursor: pointer;
  }
 
  .payment-img {
   border: 2px solid #f2f2f2;
   margin-bottom: 10px;
+  cursor: pointer;
 
   img {
    max-width: 100%;
@@ -351,6 +362,7 @@
 
   span {
    font-size: 14px;
+   cursor: pointer;
 
    @include en {
     font-size: 12px;
@@ -363,6 +375,7 @@
 
 .payment-method input:checked~.payment-img {
  border-color: $black_color;
+
 
 }
 

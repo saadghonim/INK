@@ -548,7 +548,9 @@ nav {
 
   .anc_nav.anc_lang {
     display: block;
-    padding-top: 15px;
+    position: absolute;
+    top: 20px;
+    inset-block-start: 20px;
   }
 
   .btn_bars {
@@ -592,9 +594,12 @@ nav {
     .ul_nav {
       flex-direction: column;
       justify-content: start;
+      padding: 0 15px;
 
       .action_menu {
         .anc_nav {
+          display: flex;
+          justify-content: space-between;
 
           &::after {
             font-size: 8px;
@@ -605,7 +610,6 @@ nav {
           position: static;
           padding: 15px;
           max-width: 120px;
-          margin: auto;
           transform: inherit;
           box-shadow: none;
           visibility: visible;
@@ -630,7 +634,7 @@ nav {
       li {
         margin: 0;
         margin-bottom: 15px;
-        text-align: center;
+        text-align: start;
         width: 100%;
         padding: 0;
       }

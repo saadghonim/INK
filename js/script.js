@@ -42,15 +42,9 @@ $(document).ready(function () {
     $(".btn-search-mobile .la-search").toggleClass("la-times");
   });
   // select2
-  if (
-    $(
-      ".js-slect-size , .js-select-form-country, .js-select-form-country-single"
-    ).length
-  ) {
-    var $disabledResults = $(
-      ".js-slect-size , .js-select-form-country, .js-select-form-country-single"
-    );
-    $disabledResults.select2();
+  if ($(".js-slect-size ,  .select2-gender").length) {
+    const $select2_gender = $(".js-slect-size , .select2-gender");
+    $select2_gender.select2();
   }
 
   // ~~~~~~~~~~~~back_top

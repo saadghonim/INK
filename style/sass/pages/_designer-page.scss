@@ -29,3 +29,27 @@
  padding-top: 70px;
  margin-bottom: 70px;
 }
+
+.Category_section {
+ .title_main {
+  margin-bottom: 50px;
+
+ }
+}
+
+@include xs {
+ .Category_section.sigle_page {
+  padding-top: 0px;
+ }
+}
+
+.Category_section {
+ .new {
+  @include grid_var(grid, repeat(4, 1fr), 30px);
+  margin-bottom: 50px;
+
+  @include xs {
+   @include grid_var(grid, repeat(2, 1fr), 15px);
+  }
+ }
+}

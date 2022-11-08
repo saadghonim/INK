@@ -302,6 +302,10 @@
   padding-inline-end: 60px;
   padding-bottom: 30px;
  }
+
+ .toggle_collapse.open-collapse {
+  display: block;
+ }
 }
 
 .icon-wrapper {
@@ -350,12 +354,11 @@
 }
 
 .poen_co {
- color: $main_color !important;
- // border-bottom: none !important;
+ color: $black_color !important;
 }
 
 .poen_backg {
- background-color: $main_color !important;
+ background-color: $black_color !important;
 }
 
 @include xs {
@@ -517,9 +520,11 @@
   font-weight: 400;
   line-height: 1.8;
   color: #999999;
+  border: 1px solid transparent;
 
   &:focus {
    outline: 0;
+   border-color: #000000;
   }
  }
 }

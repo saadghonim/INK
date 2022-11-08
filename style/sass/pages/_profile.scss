@@ -181,3 +181,47 @@
 .btn_color4 {
  background-color: #dedede;
 }
+
+.btn_address {
+
+ position: relative;
+ overflow: hidden;
+}
+
+.btn_address span {
+ background-color: #333;
+ color: $color_1;
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+ font-size: 12px;
+ min-width: 120px;
+ padding: 5px 10px;
+ top: -38px;
+ transition: 0.5s;
+ opacity: 0;
+ visibility: visible;
+ text-transform: capitalize;
+
+
+}
+
+.btn_address span::before {
+ content: "";
+ position: absolute;
+ bottom: -20px;
+ left: 50%;
+ transform: translateX(-50%);
+ border: 10px solid;
+ border-color: #333 transparent transparent transparent;
+
+}
+
+.btn_address:hover {
+ overflow: visible;
+}
+
+.btn_address:hover span {
+ display: inline;
+ opacity: 1;
+}

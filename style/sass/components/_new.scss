@@ -174,10 +174,6 @@
     color: #8b8b8b;
     @include flex-var(flex, center, center);
 
-    &:hover {
-      background-color: $color_2;
-      color: $color_1;
-    }
   }
 
   .printer {

@@ -335,3 +335,6 @@ show_pass.addEventListener("click", function (e) {
     e_none.style.display = "none";
   }
 });
+// ~~~~~~~~~~wow.js
+new WOW().init();
+document.documentElement.style.setProperty("--animate-duration", ".8s");

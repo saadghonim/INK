@@ -2148,9 +2148,14 @@ footer {
 }
 .checkout_section .title_main {
   text-align: start;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
+@media only screen and (max-width: 767px) {
+  .checkout_section .title_main {
+    margin-bottom: 10px;
+  }
+}
 .checkout {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -255,7 +255,15 @@
 
  .title_main {
   text-align: start;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
+ }
+}
+
+@include xs {
+ .checkout_section {
+  .title_main {
+   margin-bottom: 10px;
+  }
  }
 }
 

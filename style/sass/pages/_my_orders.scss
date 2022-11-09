@@ -160,6 +160,10 @@
    font-size: 16px;
    color: #000000;
    font-weight: 300;
+
+   img {
+    width: 70px;
+   }
   }
  }
 }
@@ -532,4 +536,39 @@
 .wishlist_section.sigle_page {
  margin-bottom: 70px;
  min-height: auto;
+}
+
+.designers_section {
+ .title_main {
+  margin-bottom: 50px;
+ }
+
+ .designers {
+  @include grid_var(grid, repeat(5, 1fr), 30px);
+  margin-bottom: 60px;
+
+  @include xs {
+   @include grid_var(grid, repeat(3, 1fr), 30px);
+  }
+
+  .anc-designer {
+   &:hover {
+    .designer_name {
+     color: #b3b3b3;
+
+    }
+   }
+
+   .designer_name {
+    color: #000000;
+
+   }
+  }
+ }
+}
+
+@include xs {
+ .designers_section.sigle_page {
+  padding-top: 0;
+ }
 }

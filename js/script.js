@@ -42,10 +42,11 @@ $(document).ready(function () {
     $(".btn-search-mobile .la-search").toggleClass("la-times");
   });
   // select2
-  if ($(".js-slect-size ,  .select2-gender").length) {
-    const $select2_gender = $(".js-slect-size , .select2-gender");
-    $select2_gender.select2();
-  }
+  // if ($(".js-slect-size ,  .select2-gender").length) {
+  //   $("select[name='gender']").select2({
+  //     minimumResultsForSearch: Infinity,
+  //   });
+  // }
 
   // ~~~~~~~~~~~~back_top
   $(window).scroll(function () {
@@ -301,6 +302,9 @@ const swiper5 = new Swiper(".like .mySwiper", {
 });
 const $disabledResults = $(".select_input");
 $disabledResults.select2();
+$("select[name='gender']").select2({
+  minimumResultsForSearch: Infinity,
+});
 // start product
 const swiper10 = new Swiper(".porduct_img .mySwiper", {
   spaceBetween: 10,

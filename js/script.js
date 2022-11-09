@@ -41,12 +41,6 @@ $(document).ready(function () {
     $(".input-serch-div-parant").slideToggle("500");
     $(".btn-search-mobile .la-search").toggleClass("la-times");
   });
-  // select2
-  // if ($(".js-slect-size ,  .select2-gender").length) {
-  //   $("select[name='gender']").select2({
-  //     minimumResultsForSearch: Infinity,
-  //   });
-  // }
 
   // ~~~~~~~~~~~~back_top
   $(window).scroll(function () {
@@ -236,7 +230,6 @@ if ($(document).width() < 768) {
 // swiper js
 const swiper4 = new Swiper(".best_designers .mySwiper", {
   autoplay: false,
-  slidesPerView: "auto",
   spaceBetween: 20,
   navigation: {
     nextEl: ".best_designers .swiper-button-next",
@@ -307,7 +300,7 @@ $("select[name='gender']").select2({
 });
 // start product
 const swiper10 = new Swiper(".porduct_img .mySwiper", {
-  spaceBetween: 10,
+  spaceBetween: 7,
   slidesPerView: 3,
   freeMode: true,
   watchSlidesProgress: true,
@@ -323,4 +316,22 @@ const swiper11 = new Swiper(".porduct_img .mySwiper2", {
   },
 });
 
-/////
+///// show $ hidden passsword
+const show_pass = document.querySelector(".btn_show_pass");
+const attrtype = document.querySelector(".password_change");
+const e_block = document.querySelector(".e_block");
+const e_none = document.querySelector(".e_none");
+
+console.log(attrtype);
+show_pass.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (attrtype.type === "password") {
+    attrtype.type = "text";
+    e_none.style.display = "block";
+    e_block.style.display = "none";
+  } else {
+    attrtype.type = "password";
+    e_block.style.display = "block";
+    e_none.style.display = "none";
+  }
+});

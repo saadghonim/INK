@@ -271,6 +271,12 @@
       border-color: $black_color;
     }
   }
+
+  @include xs {
+    #myform {
+      width: 100%
+    }
+  }
 }
 
 // .product-small-img {}
@@ -350,6 +356,8 @@
   color: $color_1;
 }
 
+
+
 .like .swiper-pagination-bullets.swiper-pagination-horizontal {
   display: none;
 }
@@ -397,6 +405,7 @@
   border: 2px solid #f2f2f2;
   @include flex-var(flex, center, space-between);
   padding: 0 20px;
+
 
   i {
     font-size: 22px;

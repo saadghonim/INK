@@ -269,6 +269,14 @@ img {
 .fixed_ {
   .header {
     padding: 0;
+
+    .input-serch-div-parant {
+      display: none;
+    }
+
+    .btn-search-mobile {
+      display: block;
+    }
   }
 
   position: fixed;
@@ -329,12 +337,17 @@ img {
 
   span {
     margin: 0 10px;
+
+    @include xs {
+      margin: 0 5px;
+    }
   }
 
   h5 {
     font-size: 12px;
     text-transform: capitalize;
     font-weight: 400;
+    width: max-content;
   }
 }
 

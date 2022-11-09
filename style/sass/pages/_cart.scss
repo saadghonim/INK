@@ -1,6 +1,9 @@
 .cart_page_section {
- padding-top: 30px;
  margin-bottom: 120px;
+
+ @include xs {
+  margin-bottom: 70px;
+ }
 
  .title_main {
   text-align: start;
@@ -82,6 +85,11 @@
   align-items: center;
   justify-content: start;
 
+  @include xs {
+   font-size: 14px;
+   text-align: start;
+   min-height: 30px;
+  }
  }
 
  .color-cart {
@@ -103,6 +111,8 @@
 }
 
 .item_cart_:first-child {
+ padding-top: 0;
+
  .title_cart {
   display: block;
  }
@@ -123,6 +133,11 @@
 
  &::after {
   content: "";
+
+  @include en {
+   content: "";
+  }
+
   font-family: "line Awesome free";
   font-weight: 900;
   font-size: 30px;
@@ -261,6 +276,8 @@
 
 @include xs {
  .checkout_section {
+  padding-top: 0px;
+
   .title_main {
    margin-bottom: 10px;
   }
@@ -358,6 +375,12 @@
   width: 120px;
   height: 120px;
   @include flex-var(flex, center, center);
+
+  @include xs {
+   width: auto;
+   height: auto;
+   height: 120px;
+  }
 
   img {
    max-width: 100%;

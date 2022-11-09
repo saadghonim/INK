@@ -107,6 +107,7 @@ img {
   text-transform: capitalize;
   vertical-align: middle;
   position: relative;
+  overflow: hidden;
   background: $color_1;
   transition-property: color;
   transition-duration: 0.5s;
@@ -149,6 +150,7 @@ img {
   transition-property: color;
   transition-duration: 0.5s;
   font-size: 14px;
+  overflow: hidden;
   font-weight: 700;
   transition: .5s;
   background-color: $color_1;
@@ -260,7 +262,7 @@ img {
 
   @include xs {
     margin-bottom: 80px;
-    padding-top: 50px;
+    // padding-top: 50px;
   }
 }
 
@@ -354,11 +356,12 @@ img {
 @include xs {
   .breadcrumb-parant {
     padding: 20px 0;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   .breadcrumb_ {
     font-size: 13px;
+    flex-wrap: wrap;
   }
 }
 

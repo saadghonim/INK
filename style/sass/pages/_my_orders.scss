@@ -4,6 +4,10 @@
  .title_main {
   text-align: start;
   margin-bottom: 50px;
+
+  @include xs {
+   margin-bottom: 30px;
+  }
  }
 
  .my-orders {

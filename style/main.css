@@ -102,6 +102,7 @@ img {
   text-transform: capitalize;
   vertical-align: middle;
   position: relative;
+  overflow: hidden;
   background: #ffffff;
   transition-property: color;
   transition-duration: 0.5s;
@@ -142,6 +143,7 @@ img {
   transition-property: color;
   transition-duration: 0.5s;
   font-size: 14px;
+  overflow: hidden;
   font-weight: 700;
   transition: 0.5s;
   background-color: #ffffff;
@@ -245,7 +247,6 @@ img {
 @media only screen and (max-width: 767px) {
   .sigle_page {
     margin-bottom: 80px;
-    padding-top: 50px;
   }
 }
 
@@ -327,10 +328,11 @@ img {
 @media only screen and (max-width: 767px) {
   .breadcrumb-parant {
     padding: 20px 0;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   .breadcrumb_ {
     font-size: 13px;
+    flex-wrap: wrap;
   }
 }
 .Category_section.sigle_page {
@@ -553,6 +555,12 @@ img {
 .bestseller_section {
   padding: 80px 0 90px;
 }
+@media only screen and (max-width: 767px) {
+  .new_section,
+.bestseller_section {
+    padding: 60px 0;
+  }
+}
 .new_section .title_main,
 .bestseller_section .title_main {
   color: #ffffff;
@@ -770,6 +778,11 @@ html[dir=ltr] .product_title {
   position: relative;
   overflow: hidden;
 }
+@media only screen and (max-width: 767px) {
+  .best_designers_section {
+    padding: 60px 0;
+  }
+}
 
 .shape_best {
   position: absolute;
@@ -917,6 +930,11 @@ html[dir=ltr] .shape_best {
   }
   .best_designers_section {
     padding: 80px 0;
+  }
+}
+@media only screen and (max-width: 767px) and (max-width: 767px) {
+  .best_designers_section {
+    padding: 60px 0;
   }
 }
 .header {
@@ -1930,8 +1948,12 @@ footer {
 }
 
 .cart_page_section {
-  padding-top: 30px;
   margin-bottom: 120px;
+}
+@media only screen and (max-width: 767px) {
+  .cart_page_section {
+    margin-bottom: 70px;
+  }
 }
 .cart_page_section .title_main {
   text-align: start;
@@ -2011,6 +2033,14 @@ footer {
   align-items: center;
   justify-content: start;
 }
+@media only screen and (max-width: 767px) {
+  .item_cart_ span,
+.item_cart_ .anc_cart_product_n {
+    font-size: 14px;
+    text-align: start;
+    min-height: 30px;
+  }
+}
 .item_cart_ .color-cart span {
   width: 20px;
   height: 20px;
@@ -2024,6 +2054,9 @@ footer {
   text-align: start;
 }
 
+.item_cart_:first-child {
+  padding-top: 0;
+}
 .item_cart_:first-child .title_cart {
   display: block;
 }
@@ -2049,6 +2082,9 @@ footer {
   inset-inline-end: 20px;
   transform: translateY(-50%);
   top: 50%;
+}
+html[dir=ltr] .btn_total::after {
+  content: "\f061";
 }
 
 .cart_group {
@@ -2152,6 +2188,9 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
+  .checkout_section {
+    padding-top: 0px;
+  }
   .checkout_section .title_main {
     margin-bottom: 10px;
   }
@@ -2258,6 +2297,13 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 767px) {
+  .payment-methods-content .payment-img {
+    width: auto;
+    height: auto;
+    height: 120px;
+  }
 }
 .payment-methods-content .payment-img img {
   max-width: 100%;
@@ -2507,9 +2553,19 @@ html[dir=ltr] .sidebar_ .ul_sidebar li .anc_sidebar {
   padding-top: 50px;
   margin-bottom: 130px;
 }
+@media only screen and (max-width: 767px) {
+  .profile_section {
+    padding-top: 0px;
+  }
+}
 .profile_section .title_main {
   text-align: start;
   margin-bottom: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .profile_section .title_main {
+    margin-bottom: 30px;
+  }
 }
 
 .profile_section.sigle_page {
@@ -2538,9 +2594,6 @@ html[dir=ltr] .sidebar_ .ul_sidebar li .anc_sidebar {
 }
 
 @media only screen and (max-width: 767px) {
-  .profile_section .title_main {
-    margin-bottom: 40px;
-  }
   .profile_section .sidebar_ {
     margin-bottom: 50px;
     -webkit-margin-end: 0;
@@ -2667,6 +2720,11 @@ html[dir=ltr] .sidebar_ .ul_sidebar li .anc_sidebar {
 .myOrders_section .title_main {
   text-align: start;
   margin-bottom: 50px;
+}
+@media only screen and (max-width: 767px) {
+  .myOrders_section .title_main {
+    margin-bottom: 30px;
+  }
 }
 .myOrders_section .my-orders {
   width: 100%;
@@ -3390,7 +3448,7 @@ html[dir=ltr] .sidebar_ .ul_sidebar li .anc_sidebar {
 }
 @media only screen and (max-width: 767px) {
   .product_section #myform {
-    width: 100%;
+    width: 290px;
   }
 }
 

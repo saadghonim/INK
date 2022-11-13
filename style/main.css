@@ -540,6 +540,30 @@ img {
   margin-top: 20px;
 }
 
+.item_about {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: start;
+}
+.item_about .about_title_item {
+  font-size: 22px;
+  color: #000000;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.item_about .p_about_item {
+  font-size: 17px;
+  color: #000000;
+  font-weight: 300;
+  text-align: justify;
+  line-height: 1.6;
+}
+.item_about .anc_designer_regis {
+  margin: 0;
+  margin-top: 20px;
+}
+
 @media only screen and (max-width: 767px) {
   .about {
     padding: 60px 0;
@@ -1474,7 +1498,7 @@ nav {
   }
   nav .ul_nav .anc_nav {
     color: #000000;
-    width: 100%;
+    width: auto;
     font-size: 16px;
   }
 }

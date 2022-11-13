@@ -16,6 +16,7 @@
 
  &:hover {
   background-color: $color_2 ;
+
  }
 }
 
@@ -132,6 +133,36 @@
    margin: 0;
    margin-top: 20px;
   }
+ }
+}
+
+.item_about {
+ display: flex;
+ align-items: flex-start;
+ flex-direction: column;
+ justify-content: start;
+ // height: max-content;
+
+ .about_title_item {
+  font-size: 22px;
+  color: $black_color;
+  font-weight: 700;
+  margin-bottom: 25px;
+ }
+
+
+
+ .p_about_item {
+  font-size: 17px;
+  color: $black_color;
+  font-weight: 300;
+  text-align: justify;
+  line-height: 1.6;
+ }
+
+ .anc_designer_regis {
+  margin: 0;
+  margin-top: 20px;
  }
 }
 
